@@ -1,5 +1,4 @@
 import * as React from "react";
-import { findDOMNode } from "react-dom";
 
 import { PrintContext } from "./PrintContext";
 import type { IPrintContextProps } from "./PrintContext";
@@ -176,7 +175,7 @@ export class ReactToPrint extends React.Component<IReactToPrintProps> {
         // https://github.com/MatthewHerbst/react-to-print/issues/459
         printWindow.srcdoc = "<!DOCTYPE html>";
 
-        const contentNodes = findDOMNode(contentEl);
+        const contentNodes = contentEl as HTMLDivElement;
 
         if (!contentNodes) {
             this.logMessages(['"react-to-print" could not locate the DOM node corresponding with the `content` prop']);

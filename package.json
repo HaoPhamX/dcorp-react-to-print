@@ -1,5 +1,5 @@
 {
-  "name": "react-to-print",
+  "name": "@dcorp/react-to-print",
   "version": "2.15.1",
   "description": "Print React components in the browser",
   "main": "lib/index.js",
@@ -11,7 +11,8 @@
     "build": "NODE_ENV=production webpack --progress",
     "lint": "eslint src/**/*.{ts,tsx}",
     "prepare": "npm run build && husky install",
-    "start": "NODE_ENV=development webpack serve"
+    "start": "NODE_ENV=development webpack serve",
+    "publish:patch": "npm publish --access public"
   },
   "repository": {
     "type": "git",
